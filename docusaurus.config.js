@@ -41,12 +41,29 @@ const config = {
   ],
   themeConfig: {
     navbar: {
+      title: '배워서 남주기',
+      logo: {
+        alt: 'blog logo',
+        src: 'img/logo.png',
+        href: 'https://gendalf9.net',
+        target: '_self',
+      },
       items: [
         { to: "/tags", label: "Tags", position: "left" },
         { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/gendalf9/gendalf9.net",
           label: "GitHub",
+          position: "right",
+        },
+        {
+          href: "https://planet.moe/@gendalf9",
+          label: "Mastodon",
+          position: "right",
+        },
+        {
+          href: "https://twitter.com/gendalf9",
+          label: "Twitter",
           position: "right",
         },
       ]
