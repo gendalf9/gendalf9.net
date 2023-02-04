@@ -16,7 +16,7 @@ export default function GiscusComponent() {
       reactionsEnabled="1"
       emitMetadata="1"
       inputPosition="top"
-      theme="preferred_color_scheme"
+      theme="{colorMode}"
       lang="ko"
       loading="lazy"
       crossorigin="anonymous"
