@@ -8,11 +8,10 @@ export default function GiscusComponent() {
   return (
     <Giscus    
       repo="gendalf9/gendalf9.net"
-      repoId="593563767"
+      repoId="R_kgDOI2EQdw"
       category="Docusaurus"
       categoryId="DIC_kwDOI2EQd84CT_wK"  // E.g. id of "General"
       mapping="url"                        // Important! To map comments to URL
-      term="Welcome to @giscus/react component!"
       strict="0"
       reactionsEnabled="1"
       emitMetadata="1"
