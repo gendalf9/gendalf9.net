@@ -5,9 +5,9 @@ authors: [gendalf9]
 tags: [docusaurus, comment, github, giscus]
 ---
 # Docusaurus에 giscus 적용해보기
-
 ## giscus란
 [giscus](https://giscus.app/ko)는 [github의 discussion](https://docs.github.com/ko/discussions)이란 기능을 통해 댓글을 저장/관리하는 댓글 시스템입니다. 
+<!--truncate-->
 
 Docusaurus에 적용을 해보면
 1. Docusaurus에 포스트 작성
@@ -53,7 +53,7 @@ Created wrapper of BlogPostItem from @docusaurus/theme-classic in
 
 요렇게 `src/theme/BlogPostItem/index.js` 로 래퍼가 생성됩니다. 래퍼 파일의 내용은 아래와 같습니다.
 
-```js
+```js title="src/theme/BlogPostItem/index.js"
 import React from 'react';
 import BlogPostItem from '@theme-original/BlogPostItem';
 
@@ -90,7 +90,7 @@ npm i @giscus/react
 ```
 그런 후 `src/components`에 `GiscusComponent`라는 경로를 생성 후 그 안에 `index.js | index.tsx` 파일을 작성합니다. 여기선 tsx를 기반으로 합니다.
 
-```tsx
+```tsx title="src/components/GiscusComponent/index.tsx"
 import React from 'react';
 import Giscus from "@giscus/react";
 import { useColorMode } from '@docusaurus/theme-common';
@@ -156,7 +156,7 @@ giscus는 블로그 포스트에 접근을 하면 github에 붙어서 정보를 
 
 `import GiscusComponent` 를 상단에 지정하고 `<GiscusComponent>`를 적합한 위치에 추가합니다. 대부분의 덧글은 블로그 포스트의 본문보다 아래에 있어야 하므로 최하단에 위치시킵니다.
 
-```js
+```js title="src/theme/BlogPostItem/index.js"
 import React from 'react';
 import BlogPostItem from '@theme-original/BlogPostItem';
 import GiscusComponent from '@site/src/components/GiscusComponent';
